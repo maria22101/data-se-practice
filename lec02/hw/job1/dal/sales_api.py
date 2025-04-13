@@ -16,7 +16,7 @@ def get_sales(date: str, page: int) -> List[Dict[str, Any]]:
     """
 
     if not API_AUTH_TOKEN:
-        print("AUTH_TOKEN environment variable must be set")
+        raise Exception("AUTH_TOKEN environment variable must be set")
 
     headers = {
         "Authorization": API_AUTH_TOKEN,
