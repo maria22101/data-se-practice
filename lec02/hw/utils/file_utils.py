@@ -1,6 +1,8 @@
 import os
 import shutil
 
+from typing import List
+
 
 def clean_directory(dir_path: str) -> None:
     if os.path.exists(dir_path):
@@ -21,3 +23,5 @@ def rename_file(file_path_from: str, file_path_to: str) -> None:
         os.rename(file_path_from, file_path_to)
 
 
+def list_in_directory(dir_path: str) -> List[str]:
+    return os.listdir(dir_path)
